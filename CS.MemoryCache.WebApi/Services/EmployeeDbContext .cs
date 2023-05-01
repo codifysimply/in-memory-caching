@@ -1,0 +1,14 @@
+﻿using CS.MemoryCache.WebApi.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace CS.MemoryCache.WebApi.Services
+{
+    public class EmployeeDbContext : DbContext
+    {
+        public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options) :
+            base(options)
+        {
+        }
+        public DbSet<Employee> Employees { get; set; }
+    }
+}
